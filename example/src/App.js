@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { ExampleComponent } from 'aws-amplify-lex-chatbot'
-import 'aws-amplify-lex-chatbot/dist/index.css'
+import ChatBot from 'aws-amplify-lex-chatbot'
+// import 'aws-amplify-lex-chatbot/dist/index.css'
+import 'aws-amplify-lex-chatbot/src/Components/chatbot.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div>
+      <ChatBot />
+    </div>
+  )
 }
 
 export default App

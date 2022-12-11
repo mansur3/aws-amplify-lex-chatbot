@@ -1,0 +1,185 @@
+/* Chat Bot */
+#chatboatIcon {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  background-color: rgb(6, 98, 147);
+  background-color: linear-gradient(
+    270deg,
+    rgba(0, 163, 218, 1) 0%,
+    rgba(6, 98, 147, 1) 100%
+  );
+  background-image: url(./icon/ionc-chatboat-white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 28px;
+  cursor: pointer;
+}
+.chatboat {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  max-width: 310px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  /* display: none; */
+}
+
+.chatboat-header {
+  padding: 10px 10px 10px 65px;
+  background: rgb(6, 98, 147);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 163, 218, 1) 0%,
+    rgba(6, 98, 147, 1) 100%
+  );
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+.chatboat-header::before {
+  content: '';
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  /* background: #ffffff url(./icon/ionc-chatboat.svg) no-repeat center center; */
+  background-size: 24px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.chatboat-header h1 {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+.chatboat-header p {
+  padding: 0;
+  margin: 0;
+}
+.btnChatClose {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  color: #ffffff;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+}
+#conversation {
+  padding: 10px;
+  clear: both;
+  min-height: 200px;
+  max-height: 400px;
+  overflow: auto;
+  background: #f1f1f1;
+}
+#chatform {
+  padding: 15px;
+
+  clear: both;
+}
+input#wisdom {
+  padding: 4px;
+  font-size: 1em;
+  width: 100%;
+  border: none;
+  outline: none;
+  /* box-shadow: 0 1px 0 rgba(0,0,0,0.30) !important; */
+}
+input#wisdom:focus {
+  /* box-shadow: 0 2px 0 #1e5fcb !important; */
+}
+input::placeholder {
+  color: #ccc;
+  /* font-style: italic; */
+}
+
+p.userRequest {
+  margin: 15px 8px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 0 8px 8px 8px;
+  min-width: 50%;
+  max-width: 85%;
+  float: left;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+p.userRequest:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid #ffffff;
+  border-top: 8px solid #ffffff;
+  border-bottom: 8px solid transparent;
+  left: -15px;
+  top: 0px;
+}
+
+p.lexResponse {
+  margin: 15px 8px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px 0 8px 8px;
+  text-align: right;
+  min-width: 50%;
+  max-width: 85%;
+  float: right;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+p.lexResponse::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 8px solid #cccccc;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #cccccc;
+  border-bottom: 8px solid transparent;
+  right: -15px;
+  top: 0;
+}
+p.lexError {
+  margin: 4px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 4px;
+  text-align: right;
+  min-width: 50%;
+  max-width: 85%;
+  float: right;
+  background-color: #f77;
+}
+
+/* width */
+#conversation::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#conversation::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+#conversation::-webkit-scrollbar-thumb {
+  background: #bababa;
+}
+
+/* Handle on hover */
+#conversation::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
