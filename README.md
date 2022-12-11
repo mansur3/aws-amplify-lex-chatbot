@@ -10,6 +10,12 @@
 npm install --save aws-amplify-lex-chatbot
 ```
 
+## Set up
+
+```import ChatBot from 'aws-amplify-lex-chatbot'
+import 'aws-amplify-lex-chatbot/dist/style.css'
+```
+
 ## Usage
 
 ```jsx
